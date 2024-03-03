@@ -2,4 +2,12 @@
 driver:
   name: default
 platforms:
-  - name: 10.70.1.13 # If you are using a configurated network, you can use the alias of server, i.e.: srvtpzinfapp03
+  - name: 10.70.1.13 # If you are using a configurated network, you can use the alias of server, i.e.: SVAPPCR01
+    groups:
+      - application
+      - app-network-develop
+provisioner:
+  name: ansible
+  inventory:
+    links:
+      group_vars: ../../../../../inventory/group_vars
