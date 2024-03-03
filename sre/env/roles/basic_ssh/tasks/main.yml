@@ -1,0 +1,6 @@
+---
+# tasks file for basic_ssh
+- name: Molecule Hello World!
+  ansible.builtin.debug:
+    msg: | 
+      Your connection by ssh was established successfully ✅🍻

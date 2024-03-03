@@ -14,7 +14,11 @@ Welcome to the development environment setup guide for using Ansible with Molecu
 
 ## Pre-requeriments ⛳
 
-> Clone this repo and enter where is this file (README.md)
+> Verify you have the correct `.rsa` key to enter differents servers.
+
+- `dir ~\.ssh` In our case use `vagrant.rsa`
+
+> Don't forget clone this repo and enter where is this file (README.md)
 
 - `git clone <repo>`
 - `cd <repo>`
@@ -121,6 +125,12 @@ Is strongly recommended read the following documentation.
    Path: ./sre/env/setup_ok/extensions
 
    `molecule converge -s <new-scenario>`
+
+- Login environment:
+
+   Path: ./sre/env/setup_ok/extensions
+
+   `molecule login -s <new-scenario>`
 
 ## Additional Notes 📝
 

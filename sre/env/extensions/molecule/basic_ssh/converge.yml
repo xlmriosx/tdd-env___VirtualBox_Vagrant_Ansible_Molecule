@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Verifying correct installation environment
+      ansible.builtin.include_role:
+        name: ../../../roles/basic_ssh
+        tasks_from: main.yml

@@ -1,0 +1,5 @@
+---
+driver:
+  name: default
+platforms:
+  - name: 10.70.1.13 # If you are using a configurated network, you can use the alias of server, i.e.: srvtpzinfapp03
