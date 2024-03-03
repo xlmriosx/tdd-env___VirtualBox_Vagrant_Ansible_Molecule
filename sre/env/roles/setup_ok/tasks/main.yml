@@ -1,0 +1,6 @@
+---
+# tasks file for setup_ok
+- name: Molecule Hello World!
+  ansible.builtin.debug:
+    msg: | 
+      Your installation was successfully ✅🍻

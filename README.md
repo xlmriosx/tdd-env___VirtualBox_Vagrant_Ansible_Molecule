@@ -7,8 +7,10 @@ Welcome to the development environment setup guide for using Ansible with Molecu
 1. [Installation](#install-applications-🔽)
 2. [Software Requirements](#software-requirements-⭕)
 3. [Getting Started Environment](#getting-started-environment-✨)
-4. [Resources](#resources-📚)
-5. [Additional Notes](#additional-notes-📝)
+4. [Verifying Correct Installation](#verifying-correct-installation-🆗)
+5. [Resources](#resources-📚)
+6. [Cheat Sheet Commands](#cheat-sheet-commands-📃)
+7. [Additional Notes](#additional-notes-📝)
 
 ## Pre-requeriments ⛳
 
@@ -68,11 +70,57 @@ In terminal:
 
    `vagrant ssh`
 
+## Verifying Correct Installation 🆗
+
+1. Navigate to molecule scenarios.
+
+   `cd sre/env/extensions`
+
+2. Run the following commands.
+
+   `molecule create -s setup_ok` and `molecule converge -s setup_ok`
+
+3. If everything is ok, you will see: `"Your installation was successfully ✅🍻"`
+
 ## Resources 📚
 
 Is strongly recommended read the following documentation.
 
 [Ansible collections and molecule](https://www.virtualbox.org/wiki/Downloads)
+
+## Cheat Sheet Commands 📃
+
+> All commands require of a specific path where execute.
+
+- Create a collection: 
+
+   Path: ./
+
+   `ansible-galaxy collection init sre.<new-collection>`
+
+- Create a role: 
+
+   Path: ./sre/env/setup_ok/roles
+
+   `ansible-galaxy role init <new-role>`
+
+- Create a scenario: 
+
+   Path: ./sre/env/setup_ok/extensions
+
+   `molecule init scenario <new-scenario>`
+
+- Instance enviornment: 
+
+   Path: ./sre/env/setup_ok/extensions
+
+   `molecule create -s <new-scenario>`
+
+- Test your code:  
+
+   Path: ./sre/env/setup_ok/extensions
+
+   `molecule converge -s <new-scenario>`
 
 ## Additional Notes 📝
 
